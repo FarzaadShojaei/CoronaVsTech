@@ -16,5 +16,8 @@ class Company(models.Model):
     last_update=models.DateTimeField(default=now, editable=True)
     application_link=URLField(blank=True)
     notes=models.CharField(max_length=100,blank=True)
-    
+
+
+    def __str__(self)->str:
+        return f"{self.name}"
     
